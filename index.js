@@ -4,7 +4,7 @@ import router from './router/index.js'
 
 const app = express()
 
-app.use(cookieParser('secret'))
+app.use(cookieParser('x'))
 app.use(express.urlencoded({extended: true}))
 app.use(express.json({limit:'5mb'}))
 
