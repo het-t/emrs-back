@@ -7,6 +7,10 @@ import createRecordField from '../controller/createRecordField.js'
 
 import createRecord from '../controller/createRecord.js'
 
+import getUpcomings from '../controller/getUpcomings.js'
+
+import getConnections from '../controller/getConnections.js'
+
 import auth from '../controller/auth.js'
 
 const router = express.Router()
@@ -17,5 +21,9 @@ router.get('/u/record', auth, getRecordFields)
 router.get('/u/create-field', auth, createRecordField)
 
 router.post('/u/create-record', auth, createRecord)
+
+router.get('/u/connections', auth, getConnections)
+
+router.get('/u/upcomings', auth, getUpcomings)
 
 export default router 
